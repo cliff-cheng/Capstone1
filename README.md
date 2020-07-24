@@ -1,7 +1,7 @@
 # Google Analytics Ecommerce
 Google Merchandise Store (2016 - 2017)
 
-![Project Image](https://i.ibb.co/fMPV78W/Screen-Shot-2020-07-23-at-10-00-25-PM.png)
+<img src="images/GoogleMerchandise.png")>
 
 > Project Goals:
 - Data clean and explore Google Merchandise Store data from (2016-2017)
