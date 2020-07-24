@@ -1,7 +1,7 @@
 # Google Analytics Ecommerce
 Google Merchandise Store (2016 - 2017)
 
-<img src="images/GoogleMerchandise.png")>
+![](images/GoogleMerchandise.png)
 
 > Project Goals:
 - Data clean and explore Google Merchandise Store data from (2016-2017)
@@ -37,7 +37,8 @@ This project will explore the sample data from Google Merchandise Store between 
 
 The data sample consisted of 366 tables each representing a day of web-traffic. In total the dataset contained 903,653 rows of data. The issue was that the dataset housed many nested dictionaries with data ranging from device information to nested dictionaries representing web-page data per visitor click. This created a heavy strain on memory as each table would be over 100mb (40GB total). The first step would be to figure out which dictionaries/keys to keep and create a script to extract embedded dictionaries into a larger dataframe. There were over 200 columns, many consisting of nested dictionaries within nested dictionaries. In order to lower disk usage I combed through the [BigQuery Export schema](https://support.google.com/analytics/answer/3437719?hl=en) and created a schema map to be used in a script to extract specific values.
 
-![Project Image2](https://i.ibb.co/XXSrCKr/Screen-Shot-2020-07-21-at-10-08-07-AM.png=100x100)
+<img src="images/ga_data_schema.png" width="400" height="400">
+
 
 
 
@@ -54,7 +55,7 @@ I originally wanted to utilize Docker and Spark to parse the nested dictionaries
 
 I decided to use Google BigQuery directly to process the data instead my local machine which could not handle the data load. Google BigQuery was simple, fast, and flexible. I easily translated my previous cleaning scripts into simple SQL that accomplished the same outcome. I exported the data into a csv which naturally turns the nested dictionaries into pandas columns.
 
-![Project Image3](https://i.ibb.co/1mLmMDR/Screen-Shot-2020-07-23-at-11-37-07-PM.png=100x100)
+<img src="images/ga_bigquery_query.png" width="400" height="400">
 
 When the data was load I created 5 functions to clean data and plot based on inputted columns I wanted to focus on.
 
@@ -64,9 +65,9 @@ When the data was load I created 5 functions to clean data and plot based on inp
 - Table (Measure ratios of grouped data)
 - Table and Barchart (Further Analysis of data)
 
-![Project Image4](https://i.ibb.co/7GQmqV0/PieChart.png=100x100)
+<img src="images/PieChart.png" width="400" height="400">
 
-![Project Image5](https://i.ibb.co/XjGx2Jc/Medium-Ratios.png=100x100)
+<img src="images/medium_ratios.png" width="400" height="400">
 [Back To The Top](#Google-Analytics-Ecommerce)
 
 CPM makes up for 7.4% of total revenue while CPC only 1.5%. However, there is a significant difference in revenue per visit between CPM and CPC. We will explore that further in the next section and run a number of hypothesis tests.
@@ -92,12 +93,12 @@ Alternative:
 
 A histogram of purchase amounts per visitor is below.
 
-![Project Image6](https://i.ibb.co/PzGzh6b/Screen-Shot-2020-07-24-at-12-30-06-AM.png)
-![Project Image7](https://i.ibb.co/C6TR9mm/Screen-Shot-2020-07-24-at-12-30-19-AM.png)
+<img src="images/histcpc.png" width="400" height="400">
+<img src="images/histcpm.png" width="400" height="400">
 
 CPC had 13,079 visits and 242 purchases. CPM had 6,184 visits and 140 purchases. Since the data from the histogram is not normally distributed, it isn't recommended we use a t-test since it assumes a normal distribution. But since our sample size is large we can do a number of other tests accounting for variance. I decided to use the Mann-Whitney U-test to figure out p-values.
 
-![Project Image8](https://i.ibb.co/c242s0N/Screen-Shot-2020-07-24-at-12-35-59-AM.png)
+<img src="images/p_values.png" width="400" height="400">
 
 The results from our Mann-Whitney U-test returned a p-value of 0.027 and 0.024 for purchase/visit rate and revenue/visit respectively. This is below our p-value threshold of 5% so we can reject the null.
 
@@ -105,9 +106,9 @@ The p-values for pageviews/visit and time spent/visit were far larger than 5% so
 
 However, there were two large outliers in the CPM that made up over 50% of the CPM revenue. After removing them and re-running the charts we obtained the following results:
 
-![Project Image9](https://i.ibb.co/BtXvRF6/Screen-Shot-2020-07-24-at-8-17-40-AM.png)
-![Project Image10](https://i.ibb.co/NNTT7xb/Screen-Shot-2020-07-24-at-8-41-28-AM.png)
-![Project Image11](https://i.ibb.co/YW8RyST/Screen-Shot-2020-07-24-at-8-54-17-AM.png)
+<img src="images/cpm_no_outliers.png" width="400" height="400">
+<img src="images/cpm_no_outliers_hist.png" width="400" height="400">
+<img src="images/cpm_no_outliers_p_value.png" width="400" height="400">
 
  While we can reject the null, this does not necessarily indicate that CPM is more accretive than CPC. We do not know the cost and conversion rates of CPM and CPC per visit as it was not provided. We can, however, use the metrics presented to help bid on CPM and CPC ad traffic based on the expected revenue per visit.
 
