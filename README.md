@@ -37,7 +37,7 @@ This project will explore the sample data from Google Merchandise Store between 
 
 The data sample consisted of 366 tables each representing a day of web-traffic. In total the dataset contained 903,653 rows of data. The issue was that the dataset housed many nested dictionaries with data ranging from device information to nested dictionaries representing web-page data per visitor click. This created a heavy strain on memory as each table would be over 100mb (40GB total). The first step would be to figure out which dictionaries/keys to keep and create a script to extract embedded dictionaries into a larger dataframe. There were over 200 columns, many consisting of nested dictionaries within nested dictionaries. In order to lower disk usage I combed through the [BigQuery Export schema](https://support.google.com/analytics/answer/3437719?hl=en) and created a schema map to be used in a script to extract specific values.
 
-![Project Image2](https://i.ibb.co/XXSrCKr/Screen-Shot-2020-07-21-at-10-08-07-AM.png)
+![Project Image2](https://i.ibb.co/XXSrCKr/Screen-Shot-2020-07-21-at-10-08-07-AM.png=100x100)
 
 
 
@@ -54,7 +54,7 @@ I originally wanted to utilize Docker and Spark to parse the nested dictionaries
 
 I decided to use Google BigQuery directly to process the data instead my local machine which could not handle the data load. Google BigQuery was simple, fast, and flexible. I easily translated my previous cleaning scripts into simple SQL that accomplished the same outcome. I exported the data into a csv which naturally turns the nested dictionaries into pandas columns.
 
-![Project Image3](https://i.ibb.co/1mLmMDR/Screen-Shot-2020-07-23-at-11-37-07-PM.png)
+![Project Image3](https://i.ibb.co/1mLmMDR/Screen-Shot-2020-07-23-at-11-37-07-PM.png=100x100)
 
 When the data was load I created 5 functions to clean data and plot based on inputted columns I wanted to focus on.
 
@@ -64,9 +64,9 @@ When the data was load I created 5 functions to clean data and plot based on inp
 - Table (Measure ratios of grouped data)
 - Table and Barchart (Further Analysis of data)
 
-![Project Image4](https://i.ibb.co/7GQmqV0/PieChart.png)
+![Project Image4](https://i.ibb.co/7GQmqV0/PieChart.png=100x100)
 
-![Project Image5](https://i.ibb.co/XjGx2Jc/Medium-Ratios.png)
+![Project Image5](https://i.ibb.co/XjGx2Jc/Medium-Ratios.png=100x100)
 [Back To The Top](#Google-Analytics-Ecommerce)
 
 CPM makes up for 7.4% of total revenue while CPC only 1.5%. However, there is a significant difference in revenue per visit between CPM and CPC. We will explore that further in the next section and run a number of hypothesis tests.
