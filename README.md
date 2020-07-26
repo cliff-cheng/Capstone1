@@ -113,6 +113,7 @@ However, the variances of the data is quite large so we will need to run the Wel
 </p>
 The p-value for purchase rate is .064 which is above the alpha threshold so we cannot reject the null. However, for average revenue per visit our p-value was .046 which is below our alpha threshold so we can reject the null. This does not necessarily indicate that CPM is more accretive than CPC because we do not know the price the Google Merchanise Store paid for their CPM and CPC ad campaigns. We can, however, use the average revenue per visit metric to help bid on CPM and CPC ad traffic in the future.
 
+
 [Back To The Top](#Google-Analytics-Ecommerce)
 
 ---
