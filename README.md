@@ -70,7 +70,7 @@ When the data was load I created 5 functions to automate clean and plotting the 
 </p>
 <p align="center">
 <img src="images/medium_ratios.png" width="500" height="600">
- <img src="images/Revenue.png" width="500" height="600">
+ <img src="images/Revenue.png" width="700" height="500">
  </p>
  
 [Back To The Top](#Google-Analytics-Ecommerce)
