@@ -54,10 +54,10 @@ I originally wanted to utilize Docker and Spark to parse the nested dictionaries
 I decided to use Google BigQuery directly to process the data instead my local machine which could not handle the data load. Google BigQuery was simple, fast, and flexible. I easily translated my previous cleaning scripts into simple SQL that accomplished the same outcome. I exported the data into a csv which naturally turns the nested dictionaries into pandas columns.
 
 <p align="center">
-<img src="images/ga_bigquery_query.png" width="300" height="350">
+<img src="images/ga_bigquery_query.png" width="300" height="400">
 </p>
 
-When the data was load I created 5 functions to clean data and plot based on inputted columns I wanted to focus on.
+When the data was load I created 5 functions to automate clean and plotting the data based on column inputs.
 
 - Barchart (Exploring overall data)
 - Piechart (Exploring % of categories)
@@ -99,19 +99,19 @@ A histogram of purchase amounts per visitor is below.
 <p align="center">
 <img src="images/Histogram.png" width="700" height="400">
 </p>
-CPC had 13,079 visits and 242 purchases. CPM had 6,184 visits and 140 purchases. Since the data from the histogram is not normally distributed, it isn't recommended we use a t-test since it assumes a normal distribution. But since our sample size is large we can do a number of other tests accounting for variance. I decided to use the Mann-Whitney U-test to figure out p-values.
+CPC had 13,079 visits and 242 purchases. CPM had 6,184 visits and 140 purchases. Since the data from the histogram is not normally distributed, I decided to use the Mann-Whitney U-test.
 <p align="center">
 <img src="images/p_values.png" width="400" height="400">
 </p>
-The results from our Mann-Whitney U-test returned a p-value of 0.027 and 0.024 for purchase/visit rate and revenue/visit respectively. This is below our p-value threshold of 5% so we can reject the null.
+The results from our Mann-Whitney U-test returned a p-value of 0.027 and 0.024 for purchase/visit rate and revenue/visit respectively. This is below our p-value threshold of 5% so we can reject the null and accept the alternative hypothesis that CPM is better than CPC advertising.
 
 The p-values for pageviews/visit and time spent/visit were far larger than 5% so we can accept the null.
 
-However, there the variances of the data is quite large so we will run the Welsh T-Test with equal variance being False:
+However, the variances of the data is quite large so we will need to run the Welsh T-Test with equal variance being False:
 <p align="center">
-<img src="images/Welsh%20T%20Test.png" width="400" height="400">
+<img src="images/Welsh%20T%20Test.png" width="600" height="400">
 </p>
- While we can reject the null, this does not necessarily indicate that CPM is more accretive than CPC. We do not know the cost and conversion rates of CPM and CPC per visit as it was not provided. We can, however, use the metrics presented to help bid on CPM and CPC ad traffic based on the expected revenue per visit.
+The p-value for purchase rate is .064 which is above the alpha threshold so we cannot reject the null. However, for average revenue per visit our p-value was .046 which is below our alpha threshold so we can reject the null. This does not necessarily indicate that CPM is more accretive than CPC because we do not know the price the Google Merchanise Store paid for their CPM and CPC ad campaigns. We can, however, use the average revenue per visit metric to help bid on CPM and CPC ad traffic in the future.
 
 [Back To The Top](#Google-Analytics-Ecommerce)
 
