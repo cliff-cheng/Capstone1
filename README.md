@@ -121,5 +121,6 @@ The p-value for purchase rate is .064 which is above the alpha threshold so we c
 
 - LinkedIn - [clifford-cheng](https://www.linkedin.com/in/clifford-cheng/)
 - Email - cliffpcheng@gmail.com
+- Link to Presentation - Google Slides(https://docs.google.com/presentation/d/1hmPWkk8wQeU-I1R2UWYbF2AE2LGmVv5vj5d2Z5rZG5g/edit?usp=sharing)
 
 [Back To The Top](#Google-Analytics-Ecommerce)
