@@ -107,7 +107,7 @@ The results from our Mann-Whitney U-test returned a p-value of 0.027 and 0.024 f
 
 The p-values for pageviews/visit and time spent/visit were far larger than 5% so we can accept the null.
 
-However, the variances of the data is quite large so we will need to run the Welsh T-Test with equal variance being False:
+However, the variances of the data are quite large so I ran the Welsh T-Test with equal variance being False:
 <p align="center">
 <img src="images/Welsh%20T%20Test.png" width="600" height="400">
 </p>
