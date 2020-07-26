@@ -97,8 +97,7 @@ Alternative:
 
 A histogram of purchase amounts per visitor is below.
 <p align="center">
-<img src="images/histcpc.png" width="700" height="400">
-<img src="images/histcpm.png" width="700" height="400">
+<img src="images/Histogram.png" width="700" height="400">
 </p>
 CPC had 13,079 visits and 242 purchases. CPM had 6,184 visits and 140 purchases. Since the data from the histogram is not normally distributed, it isn't recommended we use a t-test since it assumes a normal distribution. But since our sample size is large we can do a number of other tests accounting for variance. I decided to use the Mann-Whitney U-test to figure out p-values.
 <p align="center">
@@ -108,11 +107,9 @@ The results from our Mann-Whitney U-test returned a p-value of 0.027 and 0.024 f
 
 The p-values for pageviews/visit and time spent/visit were far larger than 5% so we can accept the null.
 
-However, there were two large outliers in the CPM that made up over 50% of the CPM revenue. After removing them and re-running the charts we obtained the following results:
+However, there the variances of the data is quite large so we will run the Welsh T-Test with equal variance being False:
 <p align="center">
-<img src="images/cpm_no_outliers.png" width="400" height="400">
-<img src="images/cpm_no_outliers_hist.png" width="500" height="300">
-<img src="images/cpm_no_outliers_p_value.png" width="400" height="400">
+<img src="images/Welsh%20T%20Test.png" width="400" height="400">
 </p>
  While we can reject the null, this does not necessarily indicate that CPM is more accretive than CPC. We do not know the cost and conversion rates of CPM and CPC per visit as it was not provided. We can, however, use the metrics presented to help bid on CPM and CPC ad traffic based on the expected revenue per visit.
 
