@@ -54,7 +54,7 @@ I originally wanted to utilize Docker and Spark to parse the nested dictionaries
 I decided to use Google BigQuery directly to process the data instead my local machine which could not handle the data load. Google BigQuery was simple, fast, and flexible. I easily translated my previous cleaning scripts into simple SQL that accomplished the same outcome. I exported the data into a csv which naturally turns the nested dictionaries into pandas columns.
 
 <p align="center">
-<img src="images/ga_bigquery_query.png" width="300" height="400">
+<img src="images/ga_bigquery_query.png" width="300" height="350">
 </p>
 
 When the data was load I created 5 functions to automate clean and plotting the data based on column inputs.
@@ -70,6 +70,7 @@ When the data was load I created 5 functions to automate clean and plotting the 
 </p>
 <p align="center">
 <img src="images/medium_ratios.png" width="500" height="600">
+ <img src="images/Revenue.png" width="500" height="600">
  </p>
  
 [Back To The Top](#Google-Analytics-Ecommerce)
