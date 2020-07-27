@@ -82,7 +82,7 @@ CPM makes up for 7.4% of total revenue while CPC only 1.5%. However, there is a 
 ## Hypothesis Testing
 
 CPC vs CPM
-P-Value = 5%
+Alpha Threshold = 5%
 
 Null Hypothesis:
 1. The purchase rate/visit of CPC and CPM come from the same distribution.
