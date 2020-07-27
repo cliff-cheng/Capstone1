@@ -54,7 +54,7 @@ I originally wanted to utilize Docker and Spark to parse the nested dictionaries
 I decided to use Google BigQuery directly to process the data instead of my local machine, which could not handle the data load. Google BigQuery was simple, fast, and flexible. I easily translated my previous cleaning scripts into simple SQL that accomplished the same outcome. I exported the data into a csv which naturally turns the nested dictionaries into pandas columns.
 
 <p align="center">
-<img src="images/ga_bigquery_query.png" width="300" height="350">
+<img src="images/ga_bigquery_query.png" width="350" height="350">
 </p>
 
 When the data was load, I created 5 functions to automate clean and plotting the data based on column inputs. Since this project focused on ad revenue, the charts below are specific to the "source" of revenue. However, I could have just as easily changed "source" to "device" or "city" to explore differences in metrics among different devices or regions. 
