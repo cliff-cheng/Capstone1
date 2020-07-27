@@ -51,7 +51,7 @@ After installing the neccessary imports to connect to Google BigQuery and authen
 
 I originally wanted to utilize Docker and Spark to parse the nested dictionaries but quickly ran into memory issues. Another function was built to read the json and parse out the nested dictionaries as individual columns. There were additional nested dictionaries within a dictionary so the function had to be modified to compensate. After successfully converting a sample size of 1500 rows from json into a pandas dataframe the function was run on the full 903,653 rows. However, the tqdm progress bar indicated the entire conversion would take 14 hours.
 
-I decided to use Google BigQuery directly to process the data instead my local machine which could not handle the data load. Google BigQuery was simple, fast, and flexible. I easily translated my previous cleaning scripts into simple SQL that accomplished the same outcome. I exported the data into a csv which naturally turns the nested dictionaries into pandas columns.
+I decided to use Google BigQuery directly to process the data instead of my local machine, which could not handle the data load. Google BigQuery was simple, fast, and flexible. I easily translated my previous cleaning scripts into simple SQL that accomplished the same outcome. I exported the data into a csv which naturally turns the nested dictionaries into pandas columns.
 
 <p align="center">
 <img src="images/ga_bigquery_query.png" width="300" height="350">
