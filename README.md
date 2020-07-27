@@ -106,13 +106,13 @@ CPC had 13,079 visits and 242 purchases. CPM had 6,184 visits and 140 purchases.
 </p>
 The results from our Mann-Whitney U-test returned a p-value of 0.027 and 0.024 for purchase/visit rate and revenue/visit respectively. This is below our p-value threshold of 5% so we can reject the null and accept the alternative hypothesis that CPM is better than CPC advertising.
 
-The p-values for pageviews/visit and time spent/visit were far larger than 5% so we can accept the null.
+The p-values for pageviews/visit and time spent/visit were far larger than 5% so we cannot reject the null.
 
 However, the variances of the data are quite large so I ran the Welsh T-Test with equal variance being False:
 <p align="center">
 <img src="images/Welsh%20T%20Test.png" width="350" height="300">
 </p>
-The p-value for purchase rate is .064 which is above the alpha threshold so we cannot reject the null. However, for average revenue per visit our p-value was .046 which is below our alpha threshold so we can reject the null. This does not necessarily indicate that CPM is more accretive than CPC because we do not know the price the Google Merchanise Store paid for their CPM and CPC ad campaigns. We can, however, use the average revenue per visit metric to help bid on CPM and CPC ad traffic in the future.
+The p-value for purchase rate is .064 which is above the alpha threshold so we cannot reject the null. However, for average revenue per visit our p-value was .046 which is below our alpha threshold so we can reject the null and accept the alternative hypothesis that CPM is better than CPC. This does not necessarily indicate that CPM is more accretive than CPC because we do not know the price the Google Merchanise Store paid for their CPM and CPC ad campaigns. We can, however, use the average revenue per visit metric to help bid on CPM and CPC ad traffic in the future.
 
 
 [Back To The Top](#Google-Analytics-Ecommerce)
