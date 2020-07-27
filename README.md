@@ -38,7 +38,7 @@ This project will explore the sample data from Google Merchandise Store between 
 The data sample consisted of 366 tables each representing a day of web-traffic. In total the dataset contained 903,653 rows of data. The issue was that the dataset housed many nested dictionaries with data ranging from device information to additional nested dictionaries representing web-page data per visitor click. This created a heavy strain on memory as each table would be over 100mb (40GB total). The first step would be to figure out which dictionaries/keys to keep and create a script to extract embedded dictionaries into a larger dataframe. There were over 100 columns, many consisting of nested dictionaries within nested dictionaries. In order to lower disk usage I combed through the [BigQuery Export schema](https://support.google.com/analytics/answer/3437719?hl=en) and created a schema map to be used in a script to extract specific values.
 
 <p align="center">
-<img src="images/ga_data_schema.png" width="300" height="400">
+<img src="images/ga_data_schema.png" width="300" height="350">
 <p/>
 
 [Back To The Top](#Google-Analytics-Ecommerce)
