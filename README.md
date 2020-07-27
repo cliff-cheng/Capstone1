@@ -57,7 +57,7 @@ I decided to use Google BigQuery directly to process the data instead of my loca
 <img src="images/ga_bigquery_query.png" width="300" height="350">
 </p>
 
-When the data was load I created 5 functions to automate clean and plotting the data based on column inputs.
+When the data was load, I created 5 functions to automate clean and plotting the data based on column inputs. Since this project focuses on ad revenue the charts below are specific to "source" of revenue. However, I could have just as easily changed "source" to "country" or "city" to explore differences in metrics among different regions. 
 
 - Barchart (Exploring overall data)
 - Piechart (Exploring % of categories)
