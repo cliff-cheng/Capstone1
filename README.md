@@ -81,16 +81,16 @@ CPC vs CPM
 Alpha Threshold = 5%
 
 Null Hypothesis:
-1. The purchase rate/visit of CPC >= CPM.
-2. The revenue/visit of CPC >= CPM.
-3. The page views/visit of CPC >= CPM.
-4. The time spent/visit of CPC >= CPM.
+1. The purchase rate/visit of CPM <= CPC.
+2. The revenue/visit of CPM <= CPC.
+3. The page views/visit CPM <= CPC.
+4. The time spent/visit CPM <= CPC.
 
 Alternative:
-1. The purchase rate/visit of CPC < CPM.
-2. The revenue/visit/visit of CPC < CPM.
-3. The page views/visit of CPC < CPM.
-4. The time spent/visit of CPC < CPM.
+1. The purchase rate/visit of CPM > CPC.
+2. The revenue/visit/visit of CPM > CPC.
+3. The page views/visit of CPM > CPC.
+4. The time spent/visit of CPM > CPC.
 
 A histogram of purchase amounts per visitor is below.
 <p align="center">
