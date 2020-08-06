@@ -81,16 +81,16 @@ CPC vs CPM
 Alpha Threshold = 5%
 
 Null Hypothesis:
-1. The purchase rate/visit of CPC and CPM come from the same distribution.
-2. The revenue/visit of CPC and CPM come from the same distribution.
-3. The page views/visit of CPC and CPM come from the same distribution.
-4. The time spent/visit of CPC and CPM come from the same distribution.
+1. The purchase rate/visit of CPC >= CPM.
+2. The revenue/visit of CPC >= CPM.
+3. The page views/visit of CPC >= CPM.
+4. The time spent/visit of CPC >= CPM.
 
 Alternative:
-1. The purchase rate/visit of CPC and CPM come from different distributions.
-2. The revenue/visit/visit of CPC and CPM come from different distributions.
-3. The page views/visit of CPC and CPM come from different distributions.
-4. The time spent/visit of CPC and CPM come from different distributions.
+1. The purchase rate/visit of CPC < CPM.
+2. The revenue/visit/visit of CPC < CPM.
+3. The page views/visit of CPC < CPM.
+4. The time spent/visit of CPC < CPM.
 
 A histogram of purchase amounts per visitor is below.
 <p align="center">
